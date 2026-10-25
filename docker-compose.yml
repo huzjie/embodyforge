@@ -1,0 +1,7 @@
+services:
+  embodyforge:
+    build: .
+    ports:
+      - "8322:8322"
+    environment:
+      - EMBODYFORGE_PORT=8322

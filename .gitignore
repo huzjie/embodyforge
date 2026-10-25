@@ -1,0 +1,19 @@
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# test / cache / checkpoints
+.pytest_cache/
+.coverage
+.embodyforge_ckpt*/
+.push_cache.json
+
+# data (root only; never ignore the package subdirs)
+/data/
+
+# editors
+.idea/
+.vscode/

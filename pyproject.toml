@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "embodyforge"
+version = "1.0.0"
+description = "Embodied humanoid coordinated-motion control engine (zero-dependency reference)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "ai-daily-agent" }]
+
+[project.scripts]
+embodyforge = "embodyforge.cli:main"
+
+[tool.setuptools]
+packages = [
+    "embodyforge", "embodyforge.core", "embodyforge.utils",
+    "embodyforge.kinematics", "embodyforge.dynamics", "embodyforge.gait",
+    "embodyforge.control", "embodyforge.choreo", "embodyforge.orchestra",
+    "embodyforge.embodied", "embodyforge.backends", "embodyforge.bench",
+    "embodyforge.serving", "embodyforge.data", "embodyforge.eval",
+]

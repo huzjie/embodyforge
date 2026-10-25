@@ -1,0 +1,76 @@
+# embodyforge default configuration
+# Declared scale (110 robots / 40 DoF / A3 form factor) is informational only;
+# the reference instantiates tiny structures.
+
+app:
+  name: embodyforge
+  version: 1.0.0
+
+kinematics:
+  leg_dof: 6
+  arm_dof: 7
+  n_legs: 2
+  n_arms: 2
+  thigh_len: 0.4
+  shin_len: 0.4
+  torso_len: 0.5
+  ik_max_iter: 60
+  ik_damping: 0.05
+  ik_tol: 0.001
+
+dynamics:
+  mass_kg: 50.0
+  com_height: 0.8
+  gravity: 9.81
+  support_radius: 0.12
+
+gait:
+  step_len: 0.2
+  step_height: 0.06
+  cadence: 1.2
+  stance_ratio: 0.6
+  n_phases: 8
+
+control:
+  kp: 120.0
+  kd: 8.0
+  preview_horizon: 10
+  fall_margin: 0.05
+
+orchestra:
+  n_robots: 8
+  coupling: 0.3
+  clock_interval: 0.05
+  collision_radius: 0.6
+  repulsion: 0.5
+
+embodied:
+  n_skills: 16
+  n_primitives: 8
+  obs_dim: 32
+  temperature: 0.8
+  learning_rate: 0.2
+  max_steps: 40
+
+serving:
+  host: 127.0.0.1
+  port: 8322
+
+train:
+  learning_rate: 0.2
+  max_steps: 40
+  seed: 20261025
+
+bench:
+  n_tasks: 200
+  n_steps: 64
+  seed: 20261025
+
+declared:
+  n_robots: 110
+  dof_per_robot: 40
+  height_m: 1.2
+  mass_kg: 50.0
+  guinness: most humanoid robots dancing simultaneously
+  record_date: 2026-10-24
+  gait_speed_ms: 1.0

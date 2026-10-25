@@ -1,0 +1,15 @@
+# 110-robot dance troupe profile: tighter coupling + more robots declared
+orchestra:
+  n_robots: 12
+  coupling: 0.5
+  clock_interval: 0.02
+  collision_radius: 0.8
+  repulsion: 0.6
+declared:
+  n_robots: 110
+  dof_per_robot: 40
+  height_m: 1.2
+  mass_kg: 50.0
+  guinness: most humanoid robots dancing simultaneously
+  record_date: 2026-10-24
+  gait_speed_ms: 1.0

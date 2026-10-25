@@ -1,0 +1,6 @@
+replicaCount: 3
+image:
+  repository: embodyforge
+  tag: latest
+service:
+  port: 8322

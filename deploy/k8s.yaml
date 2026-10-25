@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: embodyforge
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: embodyforge
+  template:
+    metadata:
+      labels:
+        app: embodyforge
+    spec:
+      containers:
+        - name: embodyforge
+          image: embodyforge:latest
+          ports:
+            - containerPort: 8322
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: embodyforge
+spec:
+  selector:
+    app: embodyforge
+  ports:
+    - port: 8322
+      targetPort: 8322

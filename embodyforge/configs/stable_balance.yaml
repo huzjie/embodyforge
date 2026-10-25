@@ -1,0 +1,16 @@
+# stable-balance profile: tighter fall margin + higher damping
+control:
+  kp: 100.0
+  kd: 12.0
+  preview_horizon: 12
+  fall_margin: 0.03
+dynamics:
+  support_radius: 0.16
+declared:
+  n_robots: 110
+  dof_per_robot: 40
+  height_m: 1.2
+  mass_kg: 50.0
+  guinness: most humanoid robots dancing simultaneously
+  record_date: 2026-10-24
+  gait_speed_ms: 1.0
